@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archimedes Sigma Law | Fyzika No Cap</title>
+    <meta name="description"
+        content="Nauč se Archimédův zákon, než dostaneš L v testu. Nejskibidi fyzika na internetu.">
+    <link rel="stylesheet" href="fyzika.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <span class="badge pulse-accent">W Buoyancy Only</span>
+            <h1>Archimédův <span style="color: var(--accent);">Sigma</span> Zákon</h1>
+            <p class="hero-p">Fyzika není mid, fyzika je lifestyle. Zjisti, proč tě voda rizzuje nahoru a proč šutr
+                dostává L.</p>
+        </header>
+
+        <section class="sigma-card">
+            <div class="sigma-content">
+                <span class="badge" style="background: var(--success); color: #000;">The Lore</span>
+                <h2>Kdo byl tenhle Chad?</h2>
+                <p>Archimedes byl OG vědec ze Syrakus. Jednou vlezl do vany a uvědomil si, že hladina stoupla. Vyletěl
+                    ven nahej a řval "EUREKA!", což je starověký "LET'S GOOO!".</p>
+                <div class="formula" id="formula-display">
+                    F<sub>vz</sub> = V · ρ · g
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">
+                    <strong>F<sub>vz</sub></strong> = Vztlaková síla (jak moc tě voda rizzuje)<br>
+                    <strong>V</strong> = Objem ponořené části (tvůj flex ve vodě)<br>
+                    <strong>ρ</strong> = Hustota kapaliny (voda je mid, rtuť je heavy)<br>
+                    <strong>g</strong> = Gravitační zrychlení (9.81 - konstanta, co tě drží u země)
+                </p>
+            </div>
+            <div class="sigma-media">
+                <img src="mgfitman.webp" alt="Sigma Archimedes" class="sigma-image floating">
+            </div>
+        </section>
+
+        <section class="sim-section">
+            <span class="badge" style="background: var(--accent);">Simulator v2.0</span>
+            <h2>Plave to, nebo dostává L?</h2>
+            <p class="hero-p" style="margin-bottom: 20px;">Vyber si item a sleduj, jak dopadne v souboji s gravitací.
+            </p>
+
+            <div class="sim-container">
+                <div class="tank-visual" id="tank">
+                    <div class="water" id="water-level"></div>
+                    <div class="object" id="item">❓</div>
+                </div>
+
+                <div class="controls">
+                    <button
+                        onclick="testItem('rock', '🪨', 1.5, 'L Gravitace vyhrála. Šutr klesá jak tvoje nálada v pondělí.')">Kámen
+                        (Heavy)</button>
+                    <button
+                        onclick="testItem('duck', '🦆', 0.1, 'W Vztlak! Kachnička má sigma hustotu a plave na chillu.')">Kachna
+                        (Light)</button>
+                    <button
+                        onclick="testItem('gold', '👑', 2.0, 'Rich L. Zlato je moc těžký, klesá ke dnu ke tvým snům.')">Zlato
+                        (Rich)</button>
+                    <button
+                        onclick="testItem('wood', '🪵', 0.4, 'Mid-air! Dřevo plave, protože má nižší hustotu než voda.')">Dřevo
+                        (Natural)</button>
+                </div>
+
+                <div class="result-text" id="result">Vyber si item...</div>
+            </div>
+        </section>
+
+        <section class="paradox-section">
+            <span class="badge" style="background: var(--accent-2);">The Ship Paradox</span>
+            <h2 style="margin-bottom: 30px;">Proč obří loď nepadne na dno?</h2>
+            <div class="paradox-grid">
+                <div class="paradox-card ship">
+                    <h3>🚢 Gigantická loď (W)</h3>
+                    <p>I když je ze železa, loď je plná vzduchu. Její **průměrná hustota** je nižší než voda. Proto
+                        dostává masivní W vztlak.</p>
+                </div>
+                <div class="paradox-card rock">
+                    <h3>🪨 Malý šroubek (L)</h3>
+                    <p>Šroubek je čistý kov. Nemá v sobě žádný vzduch, takže jeho hustota je vyšší než voda. Okamžitý
+                        propad na dno.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ranking-section">
+            <span class="badge" style="background: #fff; color: #000;">Power Ranking</span>
+            <h2>Hustota Materiálů (No Cap)</h2>
+            <table class="density-table">
+                <thead>
+                    <tr>
+                        <th>Materiál</th>
+                        <th>Status</th>
+                        <th>Hustota (kg/m³)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Polystyren</td>
+                        <td>Super Light Sigma</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Dřevo (Borovice)</td>
+                        <td>Balanced</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>Voda (The OG)</td>
+                        <td>Standard</td>
+                        <td>1 000</td>
+                    </tr>
+                    <tr>
+                        <td>Železo</td>
+                        <td>Heavy Flex</td>
+                        <td>7 870</td>
+                    </tr>
+                    <tr>
+                        <td>Zlato</td>
+                        <td>Rich & Heavy</td>
+                        <td>19 300</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="brainrot-quiz">
+            <h2 style="text-align: center; margin-bottom: 40px;">Sigma Quiz (No Cap)</h2>
+            <div class="quiz-grid">
+                <div class="quiz-card">
+                    <h3>Q1: Co dělá vztlaková síla?</h3>
+                    <button onclick="checkQuiz(this, true)">Tlačí tě nahoru (Rizzuje tě)</button>
+                    <button onclick="checkQuiz(this, false)">Tahá tě ke dnu (L move)</button>
+                </div>
+                <div class="quiz-card">
+                    <h3>Q2: Kdy těleso plave?</h3>
+                    <button onclick="checkQuiz(this, true)">Když má nižší hustotu než voda</button>
+                    <button onclick="checkQuiz(this, false)">Když má víc odběratelů na YT</button>
+                </div>
+                <div class="quiz-card">
+                    <h3>Q3: Co je "V" ve vzorci?</h3>
+                    <button onclick="checkQuiz(this, false)">Victory Royale</button>
+                    <button onclick="checkQuiz(this, true)">Objem ponořeného tělesa</button>
+                </div>
+            </div>
+        </section>
+
+        <footer style="margin-top: 100px; padding: 40px 0; text-align: center; border-top: 1px solid var(--border);">
+            <p style="color: var(--text-dim);">© 2026 Archimedes Sigma Lab - Vyrobeno s Brainrotem 💀</p>
+        </footer>
+    </div>
+
+    <script src="fyzika.js"></script>
+</body>
+
+</html>
