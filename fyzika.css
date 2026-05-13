@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+:root {
+    --bg: #050505;
+    --card: rgba(255, 255, 255, 0.05);
+    --accent: #00f2fe;
+    --text: #f1f5f9;
+}
+
+body {
+    background: radial-gradient(circle at top right, #1a1a1a, #050505);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.nadpis {
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.p1 {
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.video-anchor {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 16;
+    max-height: 80vh;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 400px; /* Šířka pro vertikální video */
+    aspect-ratio: 9 / 16;
+    max-height: 80vh;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #000;
+}
+
+.video1 { 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    object-fit: cover;
+}
+
+/* Level System */
+.level-system {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.level-info {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.level-bar-container {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.level-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button {
+    margin-top: 30px;
+    height: 80px;
+    width: 200px;
+    font-size: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.button:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+/* Educational Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--accent);
+}
+
+.info-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin: 10px 0;
+}
+
+.info-card span {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.example-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.example-container.show { opacity: 1; transform: translateY(0); }
+
+.example-card {
+    background: var(--card);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.input-group { display: flex; gap: 10px; justify-content: center; margin: 20px 0; }
+#quizInput { 
+    background: rgba(255,255,255,0.1); 
+    border: 1px solid rgba(255,255,255,0.2); 
+    padding: 10px; 
+    border-radius: 10px; 
+    color: white; 
+    width: 100px; 
+}
+#checkBtn { 
+    background: var(--accent); 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    font-weight: 700; 
+    cursor: pointer; 
+}
+
+.feedback { font-size: 1.4rem; font-weight: 700; margin: 15px 0; }
+.success-gif { width: 100%; max-width: 350px; border-radius: 15px; margin-top: 10px; }
+.reward-img { border: 4px solid gold; box-shadow: 0 0 30px gold; }
+
+/* Floating Video Styles - Optimized for Vertical Content */
+.video-container.floating {
+    position: fixed;
+    bottom: 20px;
+    width: 180px; /* Šířka pro vertikální video */
+    aspect-ratio: 9 / 16;
+    z-index: 9999;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+    border: 2px solid var(--accent);
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container.floating.floating-left { left: 20px; }
+.video-container.floating.floating-right { right: 20px; }
+
+.video-container.floating .video1 { 
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Zajistí, že video vyplní kontejner */
+}
+
+@media (max-width: 768px) {
+    .video-container.floating { 
+        width: 120px; 
+        bottom: 10px; 
+    }
+}
